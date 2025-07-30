@@ -1,0 +1,63 @@
+# Ігнорувати файли, специфічні для ОС
+.DS_Store
+Thumbs.db
+
+# Ігнорувати папки та файли Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ігнорувати папки та файли Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.db
+*.sqlite3
+venv/
+env/
+
+# Ігнорувати папки та файли Java
+*.class
+*.jar
+*.war
+*.ear
+bin/
+build/
+out/
+
+# Ігнорувати папки та файли IDE
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ігнорувати папки та файли компіляції
+dist/
+build/
+*.min.js
+*.min.css
+
+# Ігнорувати лог-файли
+*.log
+
+# Ігнорувати файли середовища
+.env
+.env.local
+.env.development
+.env.production
+
+# Ігнорувати папки та файли залежностей
+vendor/
+composer.lock
+package-lock.json
+yarn.lock
+
+# Ігнорувати згенеровані або тимчасові файли
+*.tmp
+*.temp
+*.bak
