@@ -35,7 +35,16 @@ const translations = {
 };
 
 function t(locale, key, ...args) {
-  const lang = translations[locale] ? locale : 'en';
+  // Если локаль с суффиксом, например 'en-US', берем только 'en'
+  const baseLocale = locale.split('-')[0];
+
+  // Выбираем локаль — если нет, то 'en' по умолчанию
+  const lang = translations[locale]
+    ? locale
+    : translations[baseLocale]
+    ? baseLocale
+    : 'en';
+
   const value = translations[lang][key];
   return typeof value === 'function' ? value(...args) : value;
 }
