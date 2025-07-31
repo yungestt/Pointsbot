@@ -5,19 +5,19 @@ const { t } = require('../locale');
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('addpoints')
-    .setDescriptionLocalization('en', 'Give points to a user')
+    .setDescriptionLocalization('en-US', 'Give points to a user')
     .setDescriptionLocalization('ru', 'Выдать поинты пользователю')
     .addUserOption(option =>
       option
         .setName('user')
-        .setDescriptionLocalization('en', 'The user to give points to')
+        .setDescriptionLocalization('en-US', 'The user to give points to')
         .setDescriptionLocalization('ru', 'Кому вы хотите выдать поинты')
         .setRequired(true)
     )
     .addIntegerOption(option =>
       option
         .setName('amount')
-        .setDescriptionLocalization('en', 'Amount of points to give')
+        .setDescriptionLocalization('en-US', 'Amount of points to give')
         .setDescriptionLocalization('ru', 'Сколько поинтов выдать')
         .setRequired(true)
     ),
