@@ -1,5 +1,5 @@
 const { sequelize } = require("./database");
-const { DataTypes, STRING } = require("sequelize");
+const { DataTypes } = require("sequelize");
 
 const User = sequelize.define("User", {
   discordId: {
@@ -15,14 +15,15 @@ const User = sequelize.define("User", {
   createdAt: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
+    field: "created_at",
   },
   updatedAt: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
+    field: "updated_at",
   },
 });
 
-// Модель товару магазину
 const ShopItem = sequelize.define("ShopItem", {
   id: {
     type: DataTypes.INTEGER,
@@ -52,7 +53,6 @@ const ShopItem = sequelize.define("ShopItem", {
     field: "updated_at",
   },
 });
-
 
 const UserInventory = sequelize.define("UserInventory", {
   id: {
